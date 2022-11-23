@@ -1,0 +1,18 @@
+{% extends 'pages/categorey.html' %}
+
+{% block content %}
+<div>
+   
+    <h2>{{state}}</h2>
+    <h3>{{cat}}</h3>
+    <div class="sub-categorey-div">
+        {% for sub_categorey in sub_categories %}
+        <div class="sub-categorey-info">
+            <h5><a href="{% url 'jobDetail-list' state_slug=state sub_cat_slug=sub_categorey.slug %}">{{sub_categorey}}</a></h5>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
+    <!-- <h5><a href="{% url 'jobDetail-list' state_slug=state cat_slug=cat sub_cat_slug=sub_categorey.slug %}">{{sub_categorey}}</a></h5> -->

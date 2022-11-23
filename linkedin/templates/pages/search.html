@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+   
+    <h6>Search: {{query}}</h6>
+
+    {% for i in cat %}
+    <h4>{{i}}</h4>
+    {% endfor %}
+
+    {% for i in sub_cat %}
+    <h4>{{i}}</h4>
+    {% endfor %}
+
+    {% for i in job %}
+    <h3>{{i}}</h3>
+    {% endfor %}
+
+</div>
+{% endblock %}

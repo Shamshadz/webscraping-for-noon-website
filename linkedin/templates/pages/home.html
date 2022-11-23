@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This Home Page</h1>
+
+<div class="state-div">
+    <ul>
+        {% for state in states %}
+        {{state.slug}}
+        <li><h3><a href="{% url 'categorey-list' state.slug %}">{{state}}</a></h3></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

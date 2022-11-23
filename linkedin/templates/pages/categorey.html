@@ -1,0 +1,14 @@
+{% extends 'pages/home.html' %}
+
+{% block content %}
+<div>
+    <h3>{{state}}</h3>
+    <div class="categorey-div">
+        {% for categorey in categories %}
+        <div class="categorey-info">
+            <h5><a href="{% url 'subcategorey-list' state_slug=state cat_slug=categorey.slug %}" >{{categorey}}</a></h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

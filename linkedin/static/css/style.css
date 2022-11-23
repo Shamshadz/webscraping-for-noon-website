@@ -1,0 +1,77 @@
+/* .job-div{
+    border: 1px solid black;
+} */
+
+.job-info{
+    border: 1px solid black;
+    margin-top: 1em;
+    padding: 1em 0em 1em 1em;
+}
+
+.sub-categorey-info{
+    border:1px solid black;
+    padding: 1em 0em 0em 1em;
+}
+
+.sub-categorey-info a{
+    text-decoration: none;
+    color: black;
+}
+
+.sub-categorey-info a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.categorey-info{
+    border: 1px solid black;
+    padding: 1em 0em 0em 1em;
+}
+
+.categorey-info a{
+    text-decoration: none;
+    color: black;
+}
+
+.categorey-info a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.state-div a{
+    text-decoration: none;
+    color: black;
+}
+
+.state-div a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.btn{
+    margin-top: 1em;
+}
+
+/* .form-control{
+    width: 50%;
+} */
+
+.container{
+    margin: auto;
+    /* width: 50%; */
+}
+
+.login-signup{
+    display: flex;
+}
+
+.login-signup div{
+    margin: 1em;
+}
+
+.nav-search{
+    background-color: rgb(42 42 42);
+    border: 1px solid white;
+    color: white;
+}
+
+.nav-search:hover{
+    background-color: rgb(83, 80, 80);
+}
