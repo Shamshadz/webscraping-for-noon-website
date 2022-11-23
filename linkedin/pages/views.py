@@ -1,21 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
 from django.views.generic.list import ListView
 from django.views import View
 from jobData.models import State,Categorie,SubCategorie,JobDetail
-from django.contrib.auth.decorators import login_required
-
 
 # Create your views here.
-
-# class HomeView(TemplateView):
-#     template_name = "pages/home.html"
-
-#     def get_context_data(self, *args,**kwargs):
-#             context = super(HomeView, self).get_context_data(*args, **kwargs)
-#             context['states'] = State.objects.all()
-#             return context
-
 
 class StateListView(ListView):
     template_name = "pages/home.html"
@@ -28,8 +16,7 @@ class CategoreyView(View):
     def get(self,request,slug):
         
         state = State.objects.filter(slug=slug)
-        print("################################################")
-        print(state)
+      
         queryset = Categorie.objects.filter()
         if queryset.exists():
             queryset = queryset
@@ -92,10 +79,6 @@ def search(request):
         job = job
     else:
         print("queryset not found")
-    
-    print(cat)
-    print(sub_cat)
-    print(job)
 
     context = {'job':job,'cat':cat,'sub_cat':sub_cat,'query':query}
     return render(request,'pages/search.html',context)
