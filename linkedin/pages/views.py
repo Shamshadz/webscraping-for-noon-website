@@ -70,9 +70,18 @@ def search(request):
     if len(query) <2 or len(query) > 50:
         query = []
     else:
+        state = State.objects.filter(state__icontains=query)
+        if state:
+            pass
         cat = Categorie.objects.filter(job_categorey__icontains=query)
+        if cat:
+            pass
         sub_cat = SubCategorie.objects.filter(job_sub_categorey__icontains=query)
+        if sub_cat:
+            pass
         job = JobDetail.objects.filter(job_position__icontains=query)
+        if job:
+            pass
         # job = job.union(sub_cat)
 
     if job.exists():
@@ -80,5 +89,5 @@ def search(request):
     else:
         print("queryset not found")
 
-    context = {'job':job,'cat':cat,'sub_cat':sub_cat,'query':query}
+    context = {'job':job,'cat':cat,'sub_cat':sub_cat,'query':query,'state':state[0]}
     return render(request,'pages/search.html',context)
